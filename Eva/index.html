@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página con Header</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Aquí se conecta el CSS -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <img src="images/foto.png" alt="Imagen de Logo" class="logo">
+            <nav>
+                <button onclick="location.href='#seccion1'">
+                    <img src="images/bolsa.png" alt="Tienda" class="icono-btn">Tienda
+                </button>
+                <button onclick="location.href='#seccion2'">
+                    <img src="images/lugar.png" alt="Luga" class="icono-btn">Programas
+                </button>
+                <button onclick="location.href='#seccion3'">
+                    <img src="images/ubic.png" alt="Ubicacion" class="icono-btn">Ubicacion
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    
+    <!-- Sección principal -->
+    <main>
+        <!-- Otras secciones pueden ir aquí -->
+         <!-- Sección de imagen principal -->
+    <section id="seccion-imagen" class="seccion-imagen">
+        <img src="images/imagen2.png" alt="Imagen de Sección" class="imagen-seccion">
+    </section>
+
+    <!-- Galería de imágenes -->
+    <section id="seccion-imagenes" class="seccion-imagenes">
+        <h2>Tiendas</h2>
+        <ul class="imagenes-lista">
+            <li class="imagen-item">
+                <img src="images/imagen3.png" alt="Imagen 3">
+            </li>
+            <li class="imagen-item">
+                <img src="images/imagen4.png" alt="Imagen 4">
+            </li>
+            <li class="imagen-item">
+                <img src="images/imagen5.png" alt="Imagen 5">
+            </li>
+            <li class="imagen-item">
+                <img src="images/imagen6.png" alt="Imagen 6">
+            </li>
+        </ul>
+    </section>
+
+    <section id="seccion-imagenes" class="seccion-imagenes">
+        <h2>Eventos</h2>
+        <ul class="imagenes-lista">
+            <li class="imagen-item">
+                <img src="images/imagen11.png" alt="Imagen 11">
+            </li>
+            <li class="imagen-item">
+                <img src="images/imagen12.png" alt="Imagen 12">
+            </li>
+            <li class="imagen-item">
+                <img src="images/imagen13.png" alt="Imagen 13">
+            </li>
+            <li class="imagen-item">
+                <img src="images/imagen14.png" alt="Imagen 14">
+            </li>
+        </ul>
+    </section>
+
+    <section id="seccion-recinto" class="seccion-recinto">
+        <h2>Mapa del Recinto</h2> <!-- Título de la sección -->
+        <img src="images/mapa.png" alt="Imagen del Recinto" class="imagen-recinto">
+    </section>
+    </main>
+
+    <!-- Pie de página -->
+    <!-- Loomocion (Medios de transporte) -->
+    <footer>
+        <!-- Loomocion (Medios de transporte) -->
+        <section class="footer-section" id="loomocion">
+            <h3>Loomocion</h3>
+            <div class="transport">
+                <div class="transport-item">
+                    <img src="images/bus.png" alt="Bus" class="icon">
+                    <p>Bus</p>
+                </div>
+                <div class="transport-item">
+                    <img src="images/taxi.png" alt="Taxi" class="icon">
+                    <p>Taxi</p>
+                </div>
+                <div class="transport-item">
+                    <img src="images/bici.png" alt="Bicicleta" class="icon">
+                    <p>Bicicleta</p>
+                </div>
+            </div>
+        </section>
+    
+        <div class="footer-container">
+            <!-- Contactos -->
+            <section class="footer-section" id="contactos">
+                <h3>Contactos</h3>
+                <p>Teléfono: (123) 456-7890</p>
+                <p>Correo: contacto@ejemplo.com</p>
+            </section>
+    
+            <!-- Mapa -->
+            <section class="footer-section" id="mapa">
+                <h3>Ubicación</h3>
+                <img src="images/ubi.png" alt="Ubicación" class="mapa-imagen">
+            </section>
+    
+            <!-- Redes Sociales -->
+            <section class="footer-section" id="redes-sociales">
+                <h3>Redes Sociales</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/ejemplo1" target="_blank">
+                        <img src="images/insta.png" alt="Instagram 1" class="social-icon">
+                    </a>
+                    <a href="https://www.whatsapp.com/ejemplo2" target="_blank">
+                        <img src="images/wsp.png" alt="Instagram 2" class="social-icon">
+                    </a>
+                </div>
+                <p>alo - Instagram</p>
+                <p>alo - WhatsApp</p>
+            </section>
+        </div>
+
+        <p>&copy; 2025 Mi Página Web</p>
+    </footer>
+
+</body>
+</html>
