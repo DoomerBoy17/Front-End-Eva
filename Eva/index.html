@@ -1,135 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página con Header</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Aquí se conecta el CSS -->
+    <!-- Se enlaza el archivo CSS para dar estilo a la página -->
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+    <!-- Cabecera de la página -->
     <header>
         <div class="header-container">
+            <!-- Imagen de logo en el encabezado -->
             <img src="images/foto.png" alt="Imagen de Logo" class="logo">
+            <!-- Barra de navegación -->
             <nav>
+                <!-- Botón para ir a la sección Tienda -->
                 <button onclick="location.href='#seccion1'">
                     <img src="images/bolsa.png" alt="Tienda" class="icono-btn">Tienda
                 </button>
+                <!-- Botón para ir a la sección Programas -->
                 <button onclick="location.href='#seccion2'">
                     <img src="images/lugar.png" alt="Luga" class="icono-btn">Programas
                 </button>
+                <!-- Botón para ir a la sección Ubicación -->
                 <button onclick="location.href='#seccion3'">
                     <img src="images/ubic.png" alt="Ubicacion" class="icono-btn">Ubicacion
                 </button>
             </nav>
         </div>
     </header>
-    
-    
-    <!-- Sección principal -->
+
+    <!-- Sección principal de contenido -->
     <main>
-        <!-- Otras secciones pueden ir aquí -->
-         <!-- Sección de imagen principal -->
-    <section id="seccion-imagen" class="seccion-imagen">
-        <img src="images/imagen2.png" alt="Imagen de Sección" class="imagen-seccion">
-    </section>
+        <!-- Sección de imagen principal -->
+        <section id="seccion-imagen" class="seccion-imagen">
+            <img src="images/imagen2.png" alt="Imagen de Sección" class="imagen-seccion">
+        </section>
 
-    <!-- Galería de imágenes -->
-    <section id="seccion-imagenes" class="seccion-imagenes">
-        <h2>Tiendas</h2>
-        <ul class="imagenes-lista">
-            <li class="imagen-item">
-                <img src="images/imagen3.png" alt="Imagen 3">
-            </li>
-            <li class="imagen-item">
-                <img src="images/imagen4.png" alt="Imagen 4">
-            </li>
-            <li class="imagen-item">
-                <img src="images/imagen5.png" alt="Imagen 5">
-            </li>
-            <li class="imagen-item">
-                <img src="images/imagen6.png" alt="Imagen 6">
-            </li>
-        </ul>
-    </section>
+        <!-- Galería de imágenes para las tiendas -->
+        <section id="seccion-imagenes" class="seccion-imagenes">
+            <h2>TIENDAS</h2>
+            <ul class="imagenes-lista">
+                <!-- Cada artículo de la lista es una tienda -->
+                <li class="imagen-item">
+                    <img src="images/imagen3.png" alt="Imagen 3">
+                    <div class="imagen-texto"><p>Mujer</p></div>
+                </li>
+                <li class="imagen-item">
+                    <img src="images/imagen4.png" alt="Imagen 4">
+                    <div class="imagen-texto"><p>Hombre</p></div>
+                </li>
+                <li class="imagen-item">
+                    <img src="images/imagen5.png" alt="Imagen 5">
+                    <div class="imagen-texto"><p>Pantalones</p></div>
+                </li>
+                <li class="imagen-item">
+                    <img src="images/imagen6.png" alt="Imagen 6">
+                    <div class="imagen-texto"><p>Vestidos</p></div>
+                </li>
+            </ul>
+        </section>
 
-    <section id="seccion-imagenes" class="seccion-imagenes">
-        <h2>Eventos</h2>
-        <ul class="imagenes-lista">
-            <li class="imagen-item">
-                <img src="images/imagen11.png" alt="Imagen 11">
-            </li>
-            <li class="imagen-item">
-                <img src="images/imagen12.png" alt="Imagen 12">
-            </li>
-            <li class="imagen-item">
-                <img src="images/imagen13.png" alt="Imagen 13">
-            </li>
-            <li class="imagen-item">
-                <img src="images/imagen14.png" alt="Imagen 14">
-            </li>
-        </ul>
-    </section>
+        <!-- Galería de imágenes para los eventos -->
+        <section id="seccion-imagenes" class="seccion-imagenes">
+            <h2>EVENTOS</h2>
+            <ul class="imagenes-lista">
+                <!-- Cada artículo de la lista es un evento -->
+                <li class="imagen-item">
+                    <img src="images/imagen11.png" alt="Imagen 11">
+                    <div class="imagen-texto"><p>Fiestas</p></div>
+                </li>
+                <li class="imagen-item">
+                    <img src="images/imagen12.png" alt="Imagen 12">
+                    <div class="imagen-texto"><p>Graduaciones</p></div>
+                </li>
+                <li class="imagen-item">
+                    <img src="images/imagen13.png" alt="Imagen 13">
+                    <div class="imagen-texto"><p>Formales</p></div>
+                </li>
+                <li class="imagen-item">
+                    <img src="images/imagen14.png" alt="Imagen 14">
+                    <div class="imagen-texto"><p>Cumpleaños</p></div>
+                </li>
+            </ul>
+        </section>
 
-    <section id="seccion-recinto" class="seccion-recinto">
-        <h2>Mapa del Recinto</h2> <!-- Título de la sección -->
-        <img src="images/mapa.png" alt="Imagen del Recinto" class="imagen-recinto">
-    </section>
+        <!-- Sección para mostrar la ubicación de las tiendas -->
+        <section id="seccion-recinto" class="seccion-recinto">
+            <h2>UBICACIÓN DE LAS TIENDAS</h2>
+            <!-- Imagen del mapa del recinto -->
+            <img src="images/mapa.png" alt="Imagen del Recinto" class="imagen-recinto">
+        </section>
     </main>
 
     <!-- Pie de página -->
-    <!-- Loomocion (Medios de transporte) -->
     <footer>
-        <!-- Loomocion (Medios de transporte) -->
-        <section class="footer-section" id="loomocion">
-            <h3>Loomocion</h3>
+        <!-- Sección de locomoción o medios de transporte -->
+        <section class="footer-section" id="locomocion">
+            <h3>LOCOMOCIÓN</h3>
             <div class="transport">
+                <!-- Información de los buses disponibles para las ubicaciones -->
                 <div class="transport-item">
-                    <img src="images/bus.png" alt="Bus" class="icon">
-                    <p>Bus</p>
+                    <h1>Bus de Viña</h1>
+                    <p>213 - 405 - 501</p>
                 </div>
                 <div class="transport-item">
-                    <img src="images/taxi.png" alt="Taxi" class="icon">
-                    <p>Taxi</p>
+                    <h1>Bus de Quillota</h1>
+                    <p>213 - 405 - 501</p>
                 </div>
                 <div class="transport-item">
-                    <img src="images/bici.png" alt="Bicicleta" class="icon">
-                    <p>Bicicleta</p>
+                    <h1>Bus de Limache</h1>
+                    <p>213 - 405 - 501</p>
+                </div>
+                <div class="transport-item">
+                    <h1>Bus de ConCon</h1>
+                    <p>213 - 405 - 501</p>
                 </div>
             </div>
         </section>
-    
+
         <div class="footer-container">
-            <!-- Contactos -->
-            <section class="footer-section" id="contactos">
+            <!-- Información de dirección de la tienda -->
+            <section class="footer-sec" id="mapa">
+                <h3>Dirección</h3>
+                <p>Camino a Valparaíso</p>
+                <img src="images/ubi.png" alt="Ubicación" class="mapa-imagen">
+            </section>
+
+            <!-- Horarios y estacionamiento -->
+            <section class="footer-sec" id="contactos">
+                <h3>Horarios</h3>
+                <li>Lunes a Domingo</li>
+                <p>De 10:00 a 20:00 horas</p>
+                <br>
+                <li>Estacionamiento</li>
+                <p>Gratis los primeros 30 minutos</p>
+                <p>500% la hora</p>
+            </section>
+
+            <!-- Información de contacto y redes sociales -->
+            <section class="footer-sec" id="redes-sociales">
                 <h3>Contactos</h3>
                 <p>Teléfono: (123) 456-7890</p>
                 <p>Correo: contacto@ejemplo.com</p>
-            </section>
-    
-            <!-- Mapa -->
-            <section class="footer-section" id="mapa">
-                <h3>Ubicación</h3>
-                <img src="images/ubi.png" alt="Ubicación" class="mapa-imagen">
-            </section>
-    
-            <!-- Redes Sociales -->
-            <section class="footer-section" id="redes-sociales">
-                <h3>Redes Sociales</h3>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/ejemplo1" target="_blank">
-                        <img src="images/insta.png" alt="Instagram 1" class="social-icon">
-                    </a>
-                    <a href="https://www.whatsapp.com/ejemplo2" target="_blank">
-                        <img src="images/wsp.png" alt="Instagram 2" class="social-icon">
-                    </a>
-                </div>
                 <p>alo - Instagram</p>
                 <p>alo - WhatsApp</p>
+                <div class="social-icons">
+                    <!-- Enlaces a las redes sociales -->
+                    <a href="https://www.instagram.com/ejemplo1" target="_blank">
+                        <img src="images/insta.png" alt="Ig" class="social-icon">
+                    </a>
+                    <a href="https://www.whatsapp.com/ejemplo2" target="_blank">
+                        <img src="images/wsp.png" alt="wsp" class="social-icon">
+                    </a>
+                </div>
             </section>
         </div>
 
-        <p>&copy; 2025 Mi Página Web</p>
+        <!-- Texto de derechos reservados -->
+        <div class="pie">
+            &copy; 2025 Mi Página Web - Todos los derechos reservados
+        </div>
+
     </footer>
 
 </body>
+
 </html>

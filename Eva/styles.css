@@ -16,66 +16,103 @@ body {
     height: 24px; /* Mantiene la proporción */
 }
 /* Header */
-header {
-    
-    background-color: #ffffff;
-    color: #fff;
-    padding: 10px 0;
-}
-
 .header-container {
-    
     display: flex;
+    align-items: stretch; /* Asegura que los elementos ocupen toda la altura */
     justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    height: 100px; /* Ajusta la altura según necesites */
+    background-color: #f7f7f7; /* Color de fondo opcional */
+    padding: 10px;
 }
 
 .logo {
-    max-width: 10%; /* Ajusta el logo al 20% del ancho de la pantalla */
-    height: auto; /* Mantiene la proporción del logo */
+    height: 100%; /* Ajusta al tamaño del header */
+    max-height: inherit;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 100px; /* Espaciado entre los botones */
 }
 
 nav button {
-    background: none;
-    border: none;
-    color: #000000;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
     font-size: 16px;
-    margin: 0 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #f7f7f7;
     cursor: pointer;
-    transition: color 0.3s;
+    border-radius: 5px;
+    gap: 8px;
 }
 
-nav button:hover {
-    color: #f4a261;
+.icono-btn {
+    width: 18px;
+    height: auto;
 }
 
 /* Sección de imagen */
 .seccion-imagen {
-    width: 100%;
-    height: 400px;
-    background-color: #41007e;
     display: flex;
-    justify-content: center;  /* Centra horizontalmente */
-    align-items: center;      /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0; /* Elimina márgenes externos */
+    padding: 0; /* Elimina espacio interno */
+    text-align: center;
+    overflow: hidden; /* Evita desbordes */
+    background-color: #62488b;
 }
 
+
 .imagen-seccion {
-    max-width:35%; /* Ajusta el logo al 20% del ancho de la pantalla */
-    height: auto; /* Mantiene la proporción del logo */
+    width: 90%; /* Se ajusta dinámicamente */
+    max-width: 1000px; /* Evita que crezca demasiado */
+    height: auto; /* Mantiene la proporción */
+    object-fit: contain; /* Evita cortes o deformaciones */
+    display: block; /* Evita espacios en línea innecesarios */
 }
 
 /* Galería de imágenes */
 .seccion-imagenes {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5edff;
+}
+.imagen-item {
+    position: relative; /* Asegura que el texto se pueda posicionar sobre la imagen */
+}
+.imagen-texto {
+    position: absolute;
+    top: 50%; /* Centra el texto verticalmente */
+    left: 50%; /* Centra el texto horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste fino para centrar completamente */
+    color: #ffffff; /* Color del texto */
+    text-align: center;
+    font-size: 20px; /* Tamaño de fuente */
+    font-weight: bold; /* Estilo de la fuente */
+    background-color: rgba(81, 81, 81, 0.3); /* Fondo semitransparente para mejorar la legibilidad */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.imagenes-lista {
     display: flex;
-    flex-direction: column;
-    align-items: center;  /* Centra el contenido horizontalmente */
-    justify-content: center;  /* Centra el contenido verticalmente */
-    padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;  /* Centra el texto (el título) */
+    justify-content: space-around; /* Espaciado uniforme entre las imágenes */
+    flex-wrap: wrap; /* Permite que las imágenes se acomoden si el ancho es menor */
+    gap: 15px; /* Espacio entre las imágenes */
+    padding: 0;
+    list-style-type: none;
+}
+
+.imagen-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Ajuste opcional para bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añadir sombra si se desea */
 }
 
 h2 {
@@ -114,7 +151,7 @@ h2 {
 .seccion-recinto {
     width: 100%;
     padding: 40px 20px;
-    background-color: #f0f0f0;  /* Fondo suave para destacar la sección */
+    background-color: #ffffff;  /* Fondo suave para destacar la sección */
     text-align: center;  /* Centra el texto (título) */
 }
 
@@ -133,78 +170,154 @@ h2 {
 }
 /* Footer */
 footer {
-    background-color: #41007e;
+    background-color: #3a328a;
     color: #fff;
     padding: 40px;
-    text-align: center;
+    text-align: left;
     
 }
 
+/* Contenedor de las secciones del footer */
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Espacio entre las secciones */
-    gap: 20px;
-    align-items: stretch;
-    
-}
-.footer-section {
-    margin-bottom: 40px;
-    
+    justify-content: space-between;  /* Ajusta el espacio entre las secciones */
+    gap: 10px;  /* Reduce el espacio entre las secciones */
+    align-items: flex-start;  /* Alinea los elementos al principio */
+    flex-wrap: wrap;  /* Permite que los recuadros se ajusten en pantallas más pequeñas */
 }
 
+/* Sección del footer */
+.footer-section {
+    margin-bottom: 40px;
+    flex: 1;  /* Asegura que las secciones ocupen el mismo espacio */
+    min-width: 200px;  /* Permite que las secciones se ajusten a pantallas más pequeñas */
+}
+.footer-sec {
+    flex-basis: 30%;  /* Cada recuadro ocupará un 30% del ancho disponible */
+    margin-bottom: 20px;  /* Añade un espacio entre las filas cuando se envuelven */
+    box-sizing: border-box;  /* Asegura que el padding no afecte el ancho del recuadro */
+}
+
+.footer-sec p {
+    margin-bottom: 5px; /* Reducir el margen inferior del párrafo */
+}
+
+.footer-sec img {
+    margin-top: 5px; /* Ajusta el margen superior de la imagen */
+    max-width: 200px; /* Limita el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.footer-sec h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer-sec p, .footer-sec li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: auto;
+}
+
+/* Título de cada sección */
 .footer-section h3 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #f1c40f;
+    color: #ffffff;
     text-align: center;  /* Asegura que el título esté centrado */
 }
 
+/* Estilos para la sección de transporte */
 .transport {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-around;  /* Distribuye los elementos de manera uniforme */
+    gap: 5vw; /* Ajusta el espacio entre los elementos según el tamaño de la pantalla */
+    flex-wrap: wrap;  /* Permite que los elementos se acomoden a nuevas líneas si es necesario */
+    width: 100%;  /* Asegura que el contenedor ocupe todo el ancho de la pantalla */
 }
 
 .transport-item {
     text-align: center;
 }
 
+.transport-item p {
+    padding: 10px 15px;
+    border: none;
+    background-color: #ff5900;
+    cursor: pointer;
+    border-radius: 5px;
+    gap: 8px;
+}
+
 .icon {
     width: 40px;
     height: auto;
     margin-bottom: 10px;
-    
 }
 
+/* Imagen del mapa */
 .mapa-imagen {
-    width: 20%;
+    width: 50%;
     height: auto;
     max-width: 600px;
-    margin-top: 20px;
+    min-width: 300px;
+    margin-top: 30px;
 }
 
+/* Estilos para las redes sociales */
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    display: flex;  /* Utiliza Flexbox para organizar los íconos */
+    justify-content: left;  /* Centra los íconos en el contenedor */
+    gap: 20px;  /* Espacio de 20px entre cada ícono */
 }
 
 .social-icon {
-    width: 40px;
-    height: auto;
+    width: 30px;  /* Ajusta el tamaño de los íconos a 30px */
+    height: auto;  /* Mantiene la proporción de los íconos */
 }
-
+/* Estilo para los párrafos dentro del footer */
 p {
     font-size: 16px;
     margin-top: 10px;
 }
 
-a {
-    text-decoration: none;
+.pie{
+    text-align:center ;
 }
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Apila las secciones en pantallas más pequeñas */
+        align-items: center; /* Centra las secciones */
+    }
 
-#mapa {
-    display: flex;
-    flex-direction: column; /* Asegura que el título esté arriba y la imagen abajo */
-    align-items: center; /* Centra el contenido horizontalmente */
+    .transport {
+        flex-direction: column; /* Asegura que los íconos de transporte se apilen en lugar de alinearse horizontalmente */
+        gap: 20px; /* Espacio entre los íconos */
+    }
+
+    .footer-section {
+        min-width: 100%; /* Asegura que las secciones ocupen todo el ancho disponible */
+        margin-bottom: 20px;
+    }
+
+    .mapa-imagen {
+        width: 80%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .social-icons {
+        flex-direction: column; /* Apila los iconos de redes sociales */
+        gap: 10px;
+    }
 }
